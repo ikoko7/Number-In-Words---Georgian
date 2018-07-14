@@ -1,7 +1,8 @@
 package com.clphub.utils;
 
+//CODE By Irakli Charkhalashvili
+
 import java.math.BigDecimal;
-import java.util.Random;
 
 public class NumberInWordsGeorgian {
 
@@ -91,12 +92,6 @@ public class NumberInWordsGeorgian {
             "ათას"
     };
 
-    public static String[] uniqueValues = {
-
-            "ასი",
-            "ათასი",
-            "ათი ათასი"
-    };
 
     public static String getOnes(int i) {
         return ones[i];
@@ -143,7 +138,6 @@ public class NumberInWordsGeorgian {
 
     }
 
-    //10 001
     public static String tenThousands(int number) throws Exception {
         int x = number / 1000;
         int y = number - x * 1000;
@@ -164,8 +158,6 @@ public class NumberInWordsGeorgian {
         } else {
             return ones[x] + " მილიონ " + analyseNumber(y);
         }
-
-
     }
 
 
@@ -206,16 +198,12 @@ public class NumberInWordsGeorgian {
         } else if (number > 1000000 && number < 100000000) {
             return millions(number);
         }
-        throw new Exception();
+        return "Number Can't Be Converted";
     }
 
     public static void main(String[] args) throws Exception {
-
-
-        System.out.println(getNumberInGeorgianWords(new BigDecimal("9545.36")));
-
-
+        System.out.println(
+                getNumberInGeorgianWords(new BigDecimal("9545.36"))
+        );
     }
-
-
 }
