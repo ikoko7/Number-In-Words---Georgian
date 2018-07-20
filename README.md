@@ -1,4 +1,4 @@
-# -Number-In-Words--Georgian
+# Number In Words - Georgian
 Convert Number To Words - Georgian language
 
 
